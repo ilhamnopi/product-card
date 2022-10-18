@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body > p {
+  font-size: 14px;
+}
+
+.container {
+  background-color: #f2ebe3;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+.card {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  max-width: 750px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.card .card-image {
+  background: url("../images/image-product-desktop.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.card .card-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.card .card-description h2.product-category {
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #6c7289;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+.card .card-description h1.title {
+  font-family: "Fraunces", serif;
+  font-size: 2.7rem;
+  color: #1c232b;
+  font-weight: 700;
+}
+
+.card .card-description p.description-product {
+  font-size: 1.25em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 150%;
+  color: #6c7289;
+}
+
+.card .card-description .price-box h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2.7rem;
+  color: #1c232b;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  color: darkcyan;
+}
+
+.card .card-description .price-box h1 span {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #6c7289;
+}
+
+.card .card-description a.btn-primary {
+  height: 4rem;
+  padding: 0.78rem 2rem;
+  color: white;
+  background: #3c8067;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.card .card-description a.btn-primary:hover {
+  background-color: #115f42;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 100%;
+    background-color: white;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .card .card-image {
+    background: url("../images/image-product-desktop.jpg") no-repeat;
+    background-position: 63% 41%;
+    background-size: cover;
+    height: 250px;
+  }
+  .card .card-description {
+    padding: 2rem 1rem;
+  }
+  .card .card-description h2.product-category {
+    font-size: 1em;
+  }
+  .card .card-description h1.title {
+    font-family: "Fraunces", serif;
+    font-size: 2.7rem;
+    color: #1c232b;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .card .card-description p.description-product {
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    line-height: 150%;
+    color: #6c7289;
+  }
+  .card .card-description .price-box h1 {
+    font-family: "Fraunces", serif;
+    font-size: 2.7rem;
+    color: #1c232b;
+    font-weight: 700;
+    font-size: 2rem;
+    color: darkcyan;
+  }
+  .card .card-description .price-box h1 span {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #6c7289;
+  }
+  .card .card-description a.btn-primary {
+    height: 3.5rem;
+    padding: 0.78rem 2rem;
+    color: white;
+    background: #3c8067;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+  }
+  .card .card-description a.btn-primary:hover {
+    background-color: #115f42;
+  }
+}
+/*# sourceMappingURL=style.css.map */

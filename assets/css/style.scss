@@ -1,0 +1,187 @@
+// Primary
+$dark-cyan: hsl(158, 36%, 37%);
+$dark-cyan-hover: hsl(158, 69%, 22%);
+$cream: hsl(30, 38%, 92%);
+
+//Neutural
+$dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+// Font
+$fraunce: "Fraunces", serif;
+$montserat: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+@mixin title {
+  font-family: $fraunce;
+  font-size: 2.7rem;
+  color: $dark-blue;
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  & > p {
+    font-size: 14px;
+  }
+}
+.container {
+  background-color: $cream;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.card {
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 750px;
+  overflow: hidden;
+  border-radius: 1rem;
+  & .card-image {
+    background: url("../images/image-product-desktop.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  & .card-description {
+    display: flex;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    h2.product-category {
+      font-family: "Montserrat";
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: $dark-grayish-blue;
+      letter-spacing: 0.4rem;
+      text-transform: uppercase;
+    }
+    h1.title {
+      @include title;
+    }
+    p.description-product {
+      font-size: 1.25em;
+      font-family: $montserat;
+      line-height: 150%;
+      color: $dark-grayish-blue;
+    }
+    .price-box {
+      & h1 {
+        @include title();
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: darkcyan;
+        & span {
+          font-family: $montserat;
+          text-decoration: line-through;
+          font-size: 1rem;
+          font-weight: 400;
+          letter-spacing: 0.1rem;
+          color: $dark-grayish-blue;
+        }
+      }
+    }
+    a.btn-primary {
+      height: 4rem;
+      padding: 0.78rem 2rem;
+      color: $white;
+      background: $dark-cyan;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-family: $montserat;
+      font-weight: 600;
+      transition: 0.1s;
+      &:hover {
+        background-color: $dark-cyan-hover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 100%;
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 1fr;
+    & .card-image {
+      background: url("../images/image-product-desktop.jpg") no-repeat;
+      background-position: 63% 41%;
+      background-size: cover;
+      height: 250px;
+    }
+    & .card-description {
+      padding: 2rem 1rem;
+      h2.product-category {
+        font-size: 1em;
+      }
+      h1.title {
+        @include title;
+        font-size: 2rem;
+      }
+      p.description-product {
+        font-size: 1em;
+        font-family: $montserat;
+        line-height: 150%;
+        color: $dark-grayish-blue;
+      }
+      .price-box {
+        & h1 {
+          @include title();
+          font-size: 2rem;
+          color: darkcyan;
+          & span {
+            font-family: $montserat;
+            text-decoration: line-through;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            color: $dark-grayish-blue;
+          }
+        }
+      }
+      a.btn-primary {
+        height: 3.5rem;
+        padding: 0.78rem 2rem;
+        color: $white;
+        background: $dark-cyan;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-family: $montserat;
+        font-weight: 600;
+        transition: 0.1s;
+        &:hover {
+          background-color: $dark-cyan-hover;
+        }
+      }
+    }
+  }
+}
